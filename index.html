@@ -29,7 +29,7 @@
         <p id="subTitle"></p>
         <form id="createRoom">
             <input id="sessionInput"/>
-            <button type="submit">Create it!</button>
+            <button type="submit">Criar sala!</button>
         </form>
         <div class="videoContainer">
             <video id="localVideo" style="height: 150px;" oncontextmenu="return false;"></video>
@@ -113,7 +113,7 @@
             function setRoom(name) {
                 $('form').remove();
                 $('h1').text(name);
-                $('#subTitle').text('Link to join: ' + location.href);
+                $('#subTitle').text('Link para participar: ' + location.href);
                 $('body').addClass('active');
             }
 
@@ -139,7 +139,7 @@
 
             var button = $('#screenShareButton'),
                 setButton = function (bool) {
-                    button.text(bool ? 'share screen' : 'stop sharing');
+                    button.text(bool ? 'compartilhar tela' : 'parar compartilhamento');
                 };
             webrtc.on('localScreenStopped', function () {
                 setButton(true);
